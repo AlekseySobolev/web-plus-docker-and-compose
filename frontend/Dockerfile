@@ -3,7 +3,7 @@ WORKDIR /app
 COPY ./frontend/package*.json .
 RUN npm i
 COPY ./frontend .
-COPY ./.env .
+# COPY ./.env .
 RUN npm run build
 
 FROM nginx:1.23.3-alpine AS frontend
